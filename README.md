@@ -17,4 +17,4 @@ Docker·Kubernetes·클라우드 보안 과목에서 쓴 **todo 앱**(api · web
 | `.github/workflows/`, `Jenkinsfile` | 수업에서 직접 만듭니다 |
 
 ## 실습한 사람
-- 정진혁
+- 정진혁- 질문: Discord
