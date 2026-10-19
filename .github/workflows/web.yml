@@ -67,3 +67,19 @@ jobs:
           tags: |
             ${{ steps.img.outputs.name }}:${{ github.sha }}
             ${{ steps.img.outputs.name }}:main
+  deploy-dev:
+    needs: push                       # 이미지 올리기가 끝난 뒤에
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write                 # 저장소에 커밋을 push하려면 쓰기 권한
+    steps:
+      - uses: actions/checkout@v7     # 저장소 받아오기
+      - name: dev 매니페스트에 web 태그 기록
+        run: |
+          cd deploy/overlays/dev
+          kustomize edit set image todo-web=ghcr.io/${GITHUB_REPOSITORY,,}/web:${GITHUB_SHA}
+          cd -
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "deploy(dev): web ${GITHUB_SHA::7}"
+          git push
