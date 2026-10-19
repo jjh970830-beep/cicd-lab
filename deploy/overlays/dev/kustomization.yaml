@@ -10,5 +10,5 @@ images:
   newName: ghcr.io/jjh970830-beep/cicd-lab/api
   newTag: jenkins-3
 - name: todo-web
-  newName: ghcr.io/<아이디>/cicd-lab/web
+  newName: ghcr.io/jjh970830-beep/cicd-lab/web
   newTag: main
