@@ -11,4 +11,4 @@ images:
   newTag: jenkins-15
 - name: todo-web
   newName: ghcr.io/jjh970830-beep/cicd-lab/web
-  newTag: 10b2c928a3dd98cb0843dd816ca46450d4ad0973
+  newTag: ad691d30c0d6518b86f5710cf1a645a441a533f5
