@@ -8,7 +8,7 @@ resources:
 images:
 - name: todo-api
   newName: ghcr.io/jjh970830-beep/cicd-lab/api
-  newTag: jenkins-7
+  newTag: jenkins-3
 - name: todo-web
   newName: ghcr.io/jjh970830-beep/cicd-lab/web
   newTag: main
